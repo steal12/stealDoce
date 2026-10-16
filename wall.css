@@ -1,0 +1,97 @@
+body{
+    background: 
+    repeating-radial-gradient(circle at center, #fff89b 0%, #f7ec8d 35%, #575654 100%);
+}  
+
+@font-face {
+    font-family: 'Ura Bum Bum SP';
+    src: url('fonts/UraBumBumSP.otf');
+}
+
+.box_for_wall {
+    font-family: 'Ura Bum Bum SP';
+    color: #f8f1af;
+    font-size: large;
+    background-color: #3d3c39;
+    padding: 1%;
+    margin: 20px;
+    border-radius: 5%;
+    text-align: center;
+
+    width: max-content;        
+    max-width: 250px;         
+    min-width: 120px;      
+    
+    height: auto;
+}
+
+.img_for_wall {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    /* border-radius: 5px; */
+    pointer-events: none;
+    user-select: none; 
+    -webkit-user-drag: none;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+/* .text_for_wall {
+    
+} */
+
+.main_wall {
+    width: 100%; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start; 
+}
+
+a {
+    color: #f8f1af;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        overflow: hidden; 
+    }
+
+    .main_wall {
+        flex-wrap: nowrap;         
+        justify-content: flex-start; 
+        overflow-x: auto;          
+        overflow-y: hidden;        
+        padding: 20px 15px;        
+        gap: 15px;                 
+
+        height: 100vh; 
+        box-sizing: border-box;
+        align-items: center;
+
+        -webkit-overflow-scrolling: touch; 
+        scroll-snap-type: x mandatory;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .main_wall::-webkit-scrollbar {
+        display: none;
+    }
+
+    .box_for_wall {
+        margin: 0;                 
+        padding: 15px; 
+        
+        flex: 0 0 240px;  
+        max-width: 240px;
+        
+        scroll-snap-align: start;  
+    }
+}
